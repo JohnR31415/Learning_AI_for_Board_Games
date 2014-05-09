@@ -1,0 +1,163 @@
+﻿<Window x:Class="jrowley_CapstoneSGPIA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:local="clr-namespace:jrowley_CapstoneSGPIA"
+        Title="MainWindow" Height="900" Width="1600">
+    <Window.Resources>
+        <x:Array Type="Ellipse" x:Name="tokenEllipses" x:Key="tokenEllipses">
+            <!--North America-->
+            <Ellipse x:Name="T1_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="83,137,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T2_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="238,216,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T3_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="267,402,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T4_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="357,320,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T5_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="605,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="65"/>
+            <Ellipse x:Name="T6_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="215,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="83"/>
+            <Ellipse x:Name="T7_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="351,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T8_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="463,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T9_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="238,294,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+
+            <!--South America-->
+            <Ellipse x:Name="T10_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="367,711,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T11_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="453,581,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T12_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="332,604,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T13_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="320,490,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <!--Europe-->
+            <Ellipse x:Name="T14_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="650,252,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T15_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="650,173,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T16_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="740,268,0,0" Stroke="Black" VerticalAlignment="Top" Width="67"/>
+            <Ellipse x:Name="T17_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="769,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="71"/>
+            <Ellipse x:Name="T18_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="757,345,0,0" Stroke="Black" VerticalAlignment="Top" Width="66"/>
+            <Ellipse x:Name="T19_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="888,216,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T20_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="650,345,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <!--Africa-->
+            <Ellipse x:Name="T21_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="769,630,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T22_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="829,545,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T23_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="769,453,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T24_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="888,730,0,0" Stroke="Black" VerticalAlignment="Top" Width="76"/>
+            <Ellipse x:Name="T25_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="650,498,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T26_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="757,747,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <!--Asia-->
+            <Ellipse x:Name="T27_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1004,309,0,0" Stroke="Black" VerticalAlignment="Top" Width="78"/>
+            <Ellipse x:Name="T28_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1214,376,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T29_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1077,453,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T30_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1241,226,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T31_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1380,320,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T32_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1451,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="71"/>
+            <Ellipse x:Name="T33_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="888,402,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T34_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1288,294,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T35_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1192,472,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T36_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1142,173,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T37_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1032,198,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T38_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1302,137,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <!--Australia-->
+            <Ellipse x:Name="T39_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1369,730,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T40_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1232,581,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T41_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1395,595,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+            <Ellipse x:Name="T42_C" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="1232,711,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        </x:Array>
+        <x:Array Type="Label" x:Name="tokenNames" x:Key="tokenNames">
+            <!--North America-->
+            <Label   x:Name="Alaska" Content="Alaska" HorizontalAlignment="Left" Margin="83,137,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Alberta" Content="Alberta" HorizontalAlignment="Left" Margin="238,216,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="CentralAmerica" Content="Central&#xD;&#xA;America" HorizontalAlignment="Left" Margin="269,403,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center" Height="60"/>
+            <Label   x:Name="EasternUnitedStates" Content="Eastern &#xD;&#xA;U.S." HorizontalAlignment="Left" Margin="359,322,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center" Height="41"/>
+            <Label   x:Name="Greenland" Content="Greenland" HorizontalAlignment="Left" Margin="605,89,0,0" VerticalAlignment="Top" Width="65" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="NorthwestTerritory" Content="Northwest&#xD;&#xA;Territory" HorizontalAlignment="Left" Margin="215,145,0,0" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Ontario" Content="Ontario" HorizontalAlignment="Left" Margin="351,224,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Quebec" Content="Quebec" HorizontalAlignment="Left" Margin="463,224,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="WesternUnitedStates" Content="Western &#xD;&#xA;U.S." HorizontalAlignment="Left" Margin="239,296,0,0" VerticalAlignment="Top" Width="65" HorizontalContentAlignment="Center"/>
+            <!--South America-->
+            <Label   x:Name="Argentina" Content="Argentina" HorizontalAlignment="Left" Margin="357,718,0,0" VerticalAlignment="Top" Width="80" HorizontalContentAlignment="Center" Height="27"/>
+            <Label   x:Name="Brazil" Content="Brazil" HorizontalAlignment="Left" Margin="453,581,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Peru" Content="Peru" HorizontalAlignment="Left" Margin="332,604,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Venezuela" Content="Venezuela" HorizontalAlignment="Left" Margin="308,498,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center"/>
+            <!--Europe-->
+            <Label   x:Name="GreatBritain" Content="Great &#xD;&#xA;Britain" HorizontalAlignment="Left" Margin="650,252,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Iceland" Content="Iceland" HorizontalAlignment="Left" Margin="650,173,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="NorthernEurope" Content="Northern &#xA;Europe" HorizontalAlignment="Left" Margin="740,273,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Scandinavia" Content="Scandinavia" HorizontalAlignment="Left" Margin="763,153,0,0" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="SouthernEurope" Content="Southern &#xD;&#xA;Europe" HorizontalAlignment="Left" Margin="757,348,0,0" VerticalAlignment="Top" Width="72" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Ukraine" Content="Ukraine" HorizontalAlignment="Left" Margin="888,216,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="WesternEurope" Content="Western &#xD;&#xA;Europe" HorizontalAlignment="Left" Margin="650,348,0,0" VerticalAlignment="Top" Width="65" HorizontalContentAlignment="Center"/>
+            <!--Africa-->
+            <Label   x:Name="Congo" Content="Congo" HorizontalAlignment="Left" Margin="769,630,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="EastAfrica" Content="East &#xD;&#xA;Africa" HorizontalAlignment="Left" Margin="829,545,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Egypt" Content="Egypt" HorizontalAlignment="Left" Margin="769,453,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Madagascar" Content="Madagascar" HorizontalAlignment="Left" Margin="888,737,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="NorthAfrica" Content="North &#xD;&#xA;Africa" HorizontalAlignment="Left" Margin="650,498,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="SouthAfrica" Content="South &#xD;&#xA;Africa" HorizontalAlignment="Left" Margin="757,747,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Asia-->
+            <Label   x:Name="Afghanistan" Content="Afghanistan" HorizontalAlignment="Left" Margin="1004,314,0,0" VerticalAlignment="Top" Width="78" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="China" Content="China" HorizontalAlignment="Left" Margin="1214,376,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="India" Content="India" HorizontalAlignment="Left" Margin="1077,453,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Irkutsk" Content="Irkutsk" HorizontalAlignment="Left" Margin="1241,226,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Japan" Content="Japan" HorizontalAlignment="Left" Margin="1380,320,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Kamchatka" Content="Kamchatka" HorizontalAlignment="Left" Margin="1451,151,0,0" VerticalAlignment="Top" Width="71" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="MiddleEast" Content="Middle &#xD;&#xA;East" HorizontalAlignment="Left" Margin="889,404,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Mongolia" Content="Mongolia" HorizontalAlignment="Left" Margin="1288,300,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Siam" Content="Siam" HorizontalAlignment="Left" Margin="1192,472,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Siberia" Content="Siberia" HorizontalAlignment="Left" Margin="1142,173,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Ural" Content="Ural" HorizontalAlignment="Left" Margin="1032,198,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Yakutsk" Content="Yakutsk" HorizontalAlignment="Left" Margin="1302,137,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Australia-->
+            <Label   x:Name="EasternAustralia" Content="Eastern &#xD;&#xA;Australia" HorizontalAlignment="Left" Margin="1371,733,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="Indonesia" Content="Indonesia" HorizontalAlignment="Left" Margin="1232,589,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="NewGuinea" Content="New &#xD;&#xA;Guinea" HorizontalAlignment="Left" Margin="1395,595,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="WesternAustralia" Content="Western &#xD;&#xA;Australia" HorizontalAlignment="Left" Margin="1235,714,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+        </x:Array>
+        <x:Array Type="Label" x:Name="tokenArmies" x:Key="tokenArmies">
+            <!--North America-->
+            <Label   x:Name="T1_A" Content="0" HorizontalAlignment="Left" Margin="83,163,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T2_A" Content="0" HorizontalAlignment="Left" Margin="238,242,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T3_A" Content="0" HorizontalAlignment="Left" Margin="267,436,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T4_A" Content="0" HorizontalAlignment="Left" Margin="357,354,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T5_A" Content="0" HorizontalAlignment="Left" Margin="605,108,0,0" VerticalAlignment="Top" Width="65" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T6_A" Content="0" HorizontalAlignment="Left" Margin="215,179,0,0" VerticalAlignment="Top" Width="83" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T7_A" Content="0" HorizontalAlignment="Left" Margin="351,250,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T8_A" Content="0" HorizontalAlignment="Left" Margin="463,250,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T9_A" Content="0" HorizontalAlignment="Left" Margin="238,328,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--South America-->
+            <Label   x:Name="T10_A" Content="0" HorizontalAlignment="Left" Margin="367,745,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T11_A" Content="0" HorizontalAlignment="Left" Margin="453,607,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T12_A" Content="0" HorizontalAlignment="Left" Margin="332,630,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T13_A" Content="0" HorizontalAlignment="Left" Margin="320,524,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Europe-->
+            <Label   x:Name="T14_A" Content="0" HorizontalAlignment="Left" Margin="650,286,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T15_A" Content="0" HorizontalAlignment="Left" Margin="650,199,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T16_A" Content="0" HorizontalAlignment="Left" Margin="740,302,0,0" VerticalAlignment="Top" Width="67" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T17_A" Content="0" HorizontalAlignment="Left" Margin="769,173,0,0" VerticalAlignment="Top" Width="71" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T18_A" Content="0" HorizontalAlignment="Left" Margin="757,379,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T19_A" Content="0" HorizontalAlignment="Left" Margin="888,242,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T20_A" Content="0" HorizontalAlignment="Left" Margin="650,379,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Africa-->
+            <Label   x:Name="T21_A" Content="0" HorizontalAlignment="Left" Margin="769,656,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T22_A" Content="0" HorizontalAlignment="Left" Margin="829,579,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T23_A" Content="0" HorizontalAlignment="Left" Margin="769,479,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T24_A" Content="0" HorizontalAlignment="Left" Margin="888,756,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T25_A" Content="0" HorizontalAlignment="Left" Margin="650,532,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T26_A" Content="0" HorizontalAlignment="Left" Margin="757,781,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Asia-->
+            <Label   x:Name="T27_A" Content="0" HorizontalAlignment="Left" Margin="1004,335,0,0" VerticalAlignment="Top" Width="78" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T28_A" Content="0" HorizontalAlignment="Left" Margin="1214,402,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T29_A" Content="0" HorizontalAlignment="Left" Margin="1077,479,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T30_A" Content="0" HorizontalAlignment="Left" Margin="1241,252,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T31_A" Content="0" HorizontalAlignment="Left" Margin="1380,346,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T32_A" Content="0" HorizontalAlignment="Left" Margin="1451,173,0,0" VerticalAlignment="Top" Width="71" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T33_A" Content="0" HorizontalAlignment="Left" Margin="888,436,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T34_A" Content="0" HorizontalAlignment="Left" Margin="1288,320,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T35_A" Content="0" HorizontalAlignment="Left" Margin="1192,498,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T36_A" Content="0" HorizontalAlignment="Left" Margin="1142,199,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T37_A" Content="0" HorizontalAlignment="Left" Margin="1032,224,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T38_A" Content="0" HorizontalAlignment="Left" Margin="1302,163,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <!--Australia-->
+            <Label   x:Name="T39_A" Content="0" HorizontalAlignment="Left" Margin="1369,763,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T40_A" Content="0" HorizontalAlignment="Left" Margin="1232,607,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T41_A" Content="0" HorizontalAlignment="Left" Margin="1395,629,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+            <Label   x:Name="T42_A" Content="0" HorizontalAlignment="Left" Margin="1232,745,0,0" VerticalAlignment="Top" Width="60" HorizontalContentAlignment="Center"/>
+        </x:Array>
+    </Window.Resources>
+    <Grid x:Name="Grid">
+        <Image Margin="0,0,-8,-30" Source="Image1.png" Stretch="Fill"/>
+        <!--North America-->
+    </Grid>
+</Window>

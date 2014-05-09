@@ -1,0 +1,9 @@
+To Fix:
+Throws an error when a territory has no territories to attack.
+Throws an error when a territory has no territories to move to.
+	Fix: Either remove them from the list if they can't attack/move
+	or check to if they have nothing to attack and revert a step.
+
+To Test:
+Need to test if the calculations for getting and breaking a continent work.
+Need to test if the calculations for eliminating a player work.
